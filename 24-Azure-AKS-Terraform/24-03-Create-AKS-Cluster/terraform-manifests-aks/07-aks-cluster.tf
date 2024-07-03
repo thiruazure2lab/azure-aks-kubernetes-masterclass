@@ -87,7 +87,8 @@ oms_agent {
 #  }
 # Added June 2023
 azure_active_directory_role_based_access_control {
-  #managed = true
+  
+  managed = true
   admin_group_object_ids = [azuread_group.aks_administrators.id]
 }
 
