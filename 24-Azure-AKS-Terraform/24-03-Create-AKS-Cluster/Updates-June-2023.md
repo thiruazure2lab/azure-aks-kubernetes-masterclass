@@ -68,7 +68,7 @@ resource "azuread_group" "aks_administrators" {
 ```t
   default_node_pool {
     name                 = "systempool"
-    vm_size              = "Standard_D1_v2"
+    vm_size              = "Standard_DS2_V2"
     orchestrator_version = data.azurerm_kubernetes_service_versions.current.latest_version
     #availability_zones   = [1, 2, 3]
     # Added June2023

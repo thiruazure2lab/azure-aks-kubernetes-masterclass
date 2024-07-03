@@ -13,7 +13,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "win101" {
   os_disk_size_gb       = 60 # Update June 2023
   os_disk_type          = "Managed"
   os_type               = "Windows" # Default is Linux, we can change to Windows
-  vm_size               = "Standard_DS1_V2"
+  vm_size               = "Standard_DS2_V2"
   priority              = "Regular"  # Default is Regular, we can change to Spot with additional settings like eviction_policy, spot_max_price, node_labels and node_taints
   node_labels = {
     "nodepool-type" = "user"
