@@ -1,4 +1,5 @@
 # Create Windows Azure AKS Node Pool
+/*
 resource "azurerm_kubernetes_cluster_node_pool" "win101" {
   #availability_zones    = [1, 2, 3]
   # Added June 2023
@@ -28,3 +29,4 @@ resource "azurerm_kubernetes_cluster_node_pool" "win101" {
     "app"           = "dotnet-apps"
   }
 }
+*/
