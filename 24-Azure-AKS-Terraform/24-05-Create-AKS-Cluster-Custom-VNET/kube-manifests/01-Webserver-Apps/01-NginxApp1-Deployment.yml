@@ -19,9 +19,24 @@ spec:
           image: stacksimplify/kube-nginxapp1:1.0.0
           ports:
             - containerPort: 80
+          resources:
+            limits:
+              cpu: "0.5"
+              memory: "512Mi"
+            requests:
+              cpu: "0.1"
+              memory: "256Mi"
 # To schedule pods on based on NodeSelectors
       nodeSelector:
         app: system-apps
+        kubernetes.io/role: agent
+        beta.kubernetes.io/os: linux
+        type: virtual-kubelet
+      tolerations:
+      - key: virtual-kubelet.io/provider
+        operator: Exists
+      - key: azure.com/aci
+        effect: NoSchedule     
 
 
    
